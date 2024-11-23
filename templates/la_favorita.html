@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>La favorita information</h1>
+    <p>Daycare: {{ daycare.name }}</p>
+    <p>Address: {{ daycare.address }}</p>
+    <h2>Caretakers</h2>
+    {% for caretaker in caretakers %}
+        <p>Name: {{ caretaker.name }} </p>
+        <p>Phone: {{ caretaker.phone }}</p>
+        <p>Dogs:</p>
+        <ul>
+            {% for dog in caretaker.dogs %}
+                <li>Name: {{ dog.name }}</li>
+            {% else %}
+                <li>No dogs found</li>
+            {% endfor %}
+        </ul>
+    {% endfor %}
+
+    <a href="/">Back to home</a>
+{% endblock %}

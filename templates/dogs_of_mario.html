@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Dogs Assigned to Mario</h1>
+    {% if dogs %}
+        <ul>
+        {% for dog in dogs %}
+            <li>
+                Name: {{ dog.name }}, Weight: {{ dog.weight }}
+            </li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>Mario has no new dogs assigned.</p>
+    {% endif %}
+    <a href="/">Back to home</a>
+{% endblock %}

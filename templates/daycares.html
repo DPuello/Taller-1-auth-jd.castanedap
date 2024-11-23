@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Daycares</h1>
+    {% for daycare in daycares %}
+        <p>Name: {{ daycare.name }} </p>
+        <p>Address: {{ daycare.address }}</p>
+    {% endfor %}
+{% endblock %}

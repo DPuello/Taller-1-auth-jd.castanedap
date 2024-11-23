@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% if amount %}
+        <h1>Dogs named "{{ name }}"</h1>
+        <p>{{amount}} dogs found with {{name}} name</p>
+    {% else %}
+        <h1>No dogs found with {{name}} name</h1>
+    {% endif %}
+    <a href="/">Back to home</a>
+{% endblock %}

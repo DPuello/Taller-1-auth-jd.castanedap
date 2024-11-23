@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Caretakers</h1>
+    {% for caretaker in caretakers %}
+        <p>Caretaker {{ caretaker.id }}:</p>
+        <p>Name: {{ caretaker.name }} </p>
+        <p>Phone: {{ caretaker.phone }}</p>
+        <p>Daycare: {{ caretaker.id_daycare }}</p>
+    {% endfor %}
+{% endblock %}
